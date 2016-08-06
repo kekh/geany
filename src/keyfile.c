@@ -1296,7 +1296,8 @@ void configuration_open_files(void)
 		if (set->files->len == 0)
 			continue;
 
-		last = set->files->len - 1;
+		/* last = set->files->len - 1; */
+		last = set->files->len;
 		for (i = 0; i != last; i++)
 		{
 			GtkNotebook *notebook = set->notebook;
