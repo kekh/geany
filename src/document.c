@@ -1028,7 +1028,8 @@ GEANY_API_SYMBOL
 GeanyDocument *document_open_file(const gchar *locale_filename, gboolean readonly,
 		GeanyFiletype *ft, const gchar *forced_enc)
 {
-	return document_open_file_full(NULL, locale_filename, 0, readonly, ft, forced_enc, notebook_get_primary());
+	/*return document_open_file_full(NULL, locale_filename, 0, readonly, ft, forced_enc, notebook_get_primary());*/
+	return document_open_file_full(NULL, locale_filename, 0, readonly, ft, forced_enc, notebook_get_current_notebook());
 }
 
 
